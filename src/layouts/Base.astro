@@ -1,0 +1,24 @@
+---
+import '../styles/global.css';
+const { title = 'Santiago Martínez', description = 'Sitio personal de Santiago Martínez. Trabajos de Ingeniería de Requerimientos.' } = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#102923" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <header class="site-header wrap">
+      <a class="brand" href="/" aria-label="Santiago Martínez, inicio"><span class="monogram">SM</span><span>Santiago Martínez</span></a>
+      <nav aria-label="Navegación principal"><a href="/#cursada">Cursada</a><a href="/#sobre-mi">Sobre mí</a><a href="https://github.com/SJMartinez">GitHub</a></nav>
+    </header>
+    <slot />
+    <footer class="wrap footer"><span>© 2026 Santiago Martínez</span><span>Hecho para aprender. Guardado para compartir.</span><a href="https://github.com/SJMartinez">GitHub</a></footer>
+  </body>
+</html>
